@@ -19,13 +19,11 @@
  * =============================================================================
  */
 
-$GLOBALS['config']['version'] = '1.8.0';
+define('BEANSTALK_CONSOLE_VERSION', '1.8.0');
 
 $localConfigFile = __DIR__ . '/config.local.php';
 if (file_exists($localConfigFile) && is_readable($localConfigFile) && basename(__FILE__) !== 'config.local.php') {
-    $temp_version = $GLOBALS['config']['version'];
     require $localConfigFile;
-    $GLOBALS['config']['version'] = $temp_version; // be on the safe side with the version number
     if (count($GLOBALS['config'], true) != 1 && count($GLOBALS['config'], true) < 16) {
         die('Please update your config.local.php with all new options. You are missing some.');
     }

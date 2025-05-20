@@ -22,9 +22,9 @@ $jsDefaults = $settings->getAllDefaults();
     </title>
 
     <!-- Bootstrap core CSS -->
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css?<?php echo $GLOBALS['config']['version'] ?>" rel="stylesheet">
-    <link href="css/customer.css?<?php echo $GLOBALS['config']['version'] ?>" rel="stylesheet">
-    <link href="highlight/styles/magula.css?<?php echo $GLOBALS['config']['version'] ?>" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css?<?php echo BEANSTALK_CONSOLE_VERSION ?>" rel="stylesheet">
+    <link href="css/customer.css?<?php echo BEANSTALK_CONSOLE_VERSION ?>" rel="stylesheet">
+    <link href="highlight/styles/magula.css?<?php echo BEANSTALK_CONSOLE_VERSION ?>" rel="stylesheet">
     <link rel="shortcut icon" href="assets/favicon.ico">
     <script>
         var url = "./?server=<?php echo $server ?>";
@@ -247,11 +247,11 @@ $jsDefaults = $settings->getAllDefaults();
                     <?php endif; ?>
             </div>
 
-            <script src='assets/vendor/jquery/jquery.js?<?php echo $GLOBALS['config']['version'] ?>'></script>
-            <script src="js/jquery.color.js?<?php echo $GLOBALS['config']['version'] ?>"></script>
-            <script src="js/jquery.cookie.js?<?php echo $GLOBALS['config']['version'] ?>"></script>
-            <script src="js/jquery.regexp.js?<?php echo $GLOBALS['config']['version'] ?>"></script>
-            <script src="assets/vendor/bootstrap/js/bootstrap.min.js?<?php echo $GLOBALS['config']['version'] ?>"></script>
+            <script src='assets/vendor/jquery/jquery.js?<?php echo BEANSTALK_CONSOLE_VERSION ?>'></script>
+            <script src="js/jquery.color.js?<?php echo BEANSTALK_CONSOLE_VERSION ?>"></script>
+            <script src="js/jquery.cookie.js?<?php echo BEANSTALK_CONSOLE_VERSION ?>"></script>
+            <script src="js/jquery.regexp.js?<?php echo BEANSTALK_CONSOLE_VERSION ?>"></script>
+            <script src="assets/vendor/bootstrap/js/bootstrap.min.js?<?php echo BEANSTALK_CONSOLE_VERSION ?>"></script>
             <script>
                 // Use the defaults obtained from the Settings class instance
                 window.beanstalkConsoleDefaults = <?php echo json_encode($jsDefaults, JSON_PRETTY_PRINT); ?>;
@@ -259,12 +259,12 @@ $jsDefaults = $settings->getAllDefaults();
             <?php
             if ($settings->isJobDataHighlightEnabled()) {
             ?>
-                <script src="highlight/highlight.pack.js?<?php echo $GLOBALS['config']['version'] ?>"></script>
+                <script src="highlight/highlight.pack.js?<?php echo BEANSTALK_CONSOLE_VERSION ?>"></script>
                 <script>
                     hljs.initHighlightingOnLoad();
                 </script>
             <?php } ?>
-            <script src="js/customer.js?<?php echo $GLOBALS['config']['version'] ?>"></script>
+            <script src="js/customer.js?<?php echo BEANSTALK_CONSOLE_VERSION ?>"></script>
         </body>
 
 </html>

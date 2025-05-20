@@ -126,7 +126,7 @@ if ($tplVars['_tplMain'] != 'ajax') {
         $document = json_decode($json, true);
         $latest = current($document);
         $version = @$latest['name'];
-        if (version_compare($version, $config['version']) > 0) {
+        if (version_compare($version, BEANSTALK_CONSOLE_VERSION) > 0) {
             ?>
             <br/>
             <div class="alert alert-info" style="position: relative;top:50px;">

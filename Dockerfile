@@ -1,7 +1,7 @@
 FROM php:7.1-apache
 LABEL maintainer="Rion Dooley <dooley@tacc.utexas.edu>"
 
-ENV APACHE_DOCROOT "/var/www"
+ENV APACHE_DOCROOT="/var/www"
 
 RUN apt-get update
 RUN apt-get -y upgrade

@@ -19,7 +19,7 @@
  * =============================================================================
  */
 
-define('BEANSTALK_CONSOLE_VERSION', '1.8.0');
+define('BEANSTALK_CONSOLE_VERSION', '1.8.1');
 
 $localConfigFile = __DIR__ . '/config.local.php';
 if (file_exists($localConfigFile) && is_readable($localConfigFile) && basename(__FILE__) !== 'config.local.php') {
